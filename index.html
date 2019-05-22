@@ -1,22 +1,63 @@
-
 <!DOCTYPE html>
-<head>GEB</head>
+<html>
+<head>
+    GEB
+    <link rel="stylesheet" href="style.css" media="screen" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
 <body>
-    <h2>Hello, World</h2>
-    <p></p>
-    <h3><b><i>Three-Part Invention</i></b></h3>
-    <p>Bach wrote fifteen three-part inventions. In this three-part Dialogue, the Tortoise and Achilles -the main fictional progtagonists in the Dialogues- are "invented" by Zeno (as in fact they were, to illustrate Zeno's paradoxes of motion). Very short, it simply gives the flavor of the Dialogues to come.</p>
-    <p></p>
-    <p><i>Achilles (a Greek warrior, the fleetest of foot of all mortals) and a Tortoise are standing together on a dusty runway in the hot sun. Far down the runway, on a tall flagpole, there hangs a large rectangular flag. The flag is solid red, except where a thin ring-shaped hole has been cut out of it, through which one can see the sky.</i></p>
-    <p></p>
-    <p>Audio for the Three-Part Invention</p>
-    <p>
-        <audio autoplay="autoplay" controls="controls">  
-                <source src="3partInvention_take1_5_21_19.mp3" />  
-                <source src="3partInvention_take1_5_21_19.mp3" />  
-        </audio> 
-        
-    </p>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+        <h2>Hello, World</h2>
+        <!-- Use any element to open the sidenav -->
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">Table of Contents</span>
+        <p></p>
+        <h3><b><i>Three-Part Invention</i></b></h3>
+        <p>Bach wrote fifteen three-part inventions. In this three-part Dialogue, the Tortoise and Achilles -the main
+            fictional progtagonists in the Dialogues- are "invented" by Zeno (as in fact they were, to illustrate Zeno's
+            paradoxes of motion). Very short, it simply gives the flavor of the Dialogues to come.</p>
+        <p></p>
+        <p><i>Achilles (a Greek warrior, the fleetest of foot of all mortals) and a Tortoise are standing together on a
+                dusty runway in the hot sun. Far down the runway, on a tall flagpole, there hangs a large rectangular
+                flag. The flag is solid red, except where a thin ring-shaped hole has been cut out of it, through which
+                one can see the sky.</i></p>
+        <p></p>
+        <p>Audio for the Three-Part Invention</p>
+        <p>
+            <audio autoplay="autoplay" controls="controls">
+                <source src="3partInvention_take1_5_21_19.mp3" />
+                <source src="3partInvention_take1_5_21_19.mp3" />
+            </audio>
+
+        </p>
+    </div>
+    <script>
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "180px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            isOpen = true;
+            }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
 </body>
 
-<html>
+</html>
